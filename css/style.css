@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+}
+body {
+	background-color: white;
+}
+
+p {
+	padding: 5px;
+}
+
+.gambar {
+	width: 400px;
+	height: 200px;
+}
+
+#content {
+	padding: 2%;
+}
+
+#header {
+	margin-top: 2%;
+	padding-bottom: 2%;
+	border-bottom: solid 1px black;
+	text-align: center;
+}
+
+#footer {
+	background-color: blue;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	height: 5%;
+}

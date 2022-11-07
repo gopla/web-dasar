@@ -1,0 +1,29 @@
+.container {
+	display: flex;
+	border: solid 1px black;
+}
+
+.home {
+	color: white;
+	background-color: rgb(76, 219, 40);
+	height: 50px;
+	width: 100px;
+	font-size: 2rem;
+}
+
+.artikel {
+	color: white;
+	background-color: rgb(186, 219, 67);
+	height: 50px;
+	width: 100px;
+	font-size: 2rem;
+	margin-right: auto;
+}
+
+.logout {
+	color: white;
+	background-color: rgba(243, 61, 61, 0.836);
+	height: 50px;
+	width: 100px;
+	font-size: 2rem;
+}

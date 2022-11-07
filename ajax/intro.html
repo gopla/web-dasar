@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+    <div id="content"></div>
+
+		<script>
+			$(document).ready(function () {
+        $.ajax({
+          type: "get",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          success: function (response) {
+           let template = []
+            for (let i = 0; i < 5; i++) {
+              template.push(`
+                <h1>${response[i].title}</h1>
+                <p>${response[i].body}</p>
+                <hr />
+              `)
+            }
+            $('#content').html(template); 
+          }
+        });
+			})
+		</script>
+	</body>
+</html>

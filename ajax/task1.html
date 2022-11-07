@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+    <div id="content">
+      
+    </div>
+
+		<script>
+			$(document).ready(function () {
+        $.ajax({
+          type: "get",
+          url: "https://jsonplaceholder.typicode.com/photos?_limit=10",
+          dataType: "json",
+          success: function (response) {
+            let template = response.map(data => {
+              return `
+              <img src="${data.thumbnailUrl}">
+              <h3>${data.title}</h3>
+              <span>${data.title}</span>
+              <hr />
+              `
+            })
+
+            $('#content').html(template);
+          }
+        });
+
+        let data = {
+          userId: 11,
+          id: 101,
+          title: 'Lorem Ipsum',
+          body: 'Lorem Ipsum dolor sit amet'
+        }
+
+        $.ajax({
+          type: "post",
+          url: "https://jsonplaceholder.typicode.com/posts",
+          data: data,
+          success: function (response) {
+            console.log(response);
+          }
+        });
+			})
+		</script>
+	</body>
+</html>
